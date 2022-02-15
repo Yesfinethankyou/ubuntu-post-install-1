@@ -60,7 +60,7 @@ config:
 
   # Flags
   flags:
-    purge_enabled: true
+    purge_enabled: false
     preserve_debs: false
 
   # Packages to purge
@@ -77,6 +77,8 @@ config:
       - 
     # Debian packages/.deb files
     debs:
+      - https://mullvad.net/media/app/MullvadVPN-2021.6_amd64.deb
+      - https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.deb
     binaries:
       - 
     apt:
@@ -88,6 +90,7 @@ config:
         - gnupg2
         - ufw
         - nmap
+        - fail2ban
       # Productivity & Office Tools.
       productivity:
         - curl
@@ -118,3 +121,17 @@ config:
         - vivaldi-stable
         # Telegram
         - telegram-desktop
+        # anki
+        - anki
+        # calibre
+        - calibre 
+        # torrent
+        - qbittorrent
+        # guake
+        - guake
+        # zsh
+        - zsh
+        # neofetch
+        - neofetch
+        # tldr
+        - tldr
