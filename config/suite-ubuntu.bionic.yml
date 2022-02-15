@@ -135,3 +135,7 @@ config:
         - neofetch
         # tldr
         - tldr
+        # gedit
+        - gedit
+        # flameshot
+        - flameshot
