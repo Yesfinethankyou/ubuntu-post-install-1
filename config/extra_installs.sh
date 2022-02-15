@@ -1,4 +1,5 @@
 #!/bin/bash
+# maybe check this out https://github.com/Traceabl3/ubuntu-post-installer/blob/main/run
 
 wget -O ~/Downloads/tresorit_installer.run https://installerstorage.blob.core.windows.net/public/install/tresorit_installer.run
 chmod +x ~/Downloads/tresorit_installer.run; ./tresorit_installer.run
