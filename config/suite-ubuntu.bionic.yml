@@ -7,7 +7,7 @@ config:
   # Enabled Tasks
   tasks:
     update: true
-    upgrade: false
+    upgrade: true
     # Add Repos
     # individual repos flags are mentioned under config.add_repo key
     add_repo: true
@@ -16,47 +16,47 @@ config:
     # APT Packages
     apt: true
     # Whether to purge packages mentioned in config.purge key
-    purge: true
-    debs: true
-    binaries: true
-    snaps: true
+    purge: false
+    debs: false
+    binaries: false
+    snaps: false
   # Repository Flags
   add_repo:
-    bazel: true
+    bazel: false
     brave_browser: true
     chrome: true
-    docker: true
-    edge: true
+    docker: false
+    edge: false
     element_io: true
     # This is really flaky so drop it
     gcsfuse: false
     github: true
-    googlecloud: true
-    gvisor: true
-    hashicorp: true
+    googlecloud: false
+    gvisor: false
+    hashicorp: false
     mendeley: false
-    miniconda: true
-    neurodebian: true
-    podman: true
-    protonvpn: true
-    ros: true
-    ros2: true
+    miniconda: false
+    neurodebian: false
+    podman: false
+    protonvpn: false
+    ros: false
+    ros2: false
     signal: true
-    skype: true
+    skype: false
     spotify: true
-    slack: true
+    slack: false
     sublimetext: true
-    teams: true
+    teams: false
     vivaldi: true
     vscode: true
     winehq: true
     # Debian
-    debian_nonfree: true
-    debian_contrib: true
+    debian_nonfree: false
+    debian_contrib: false
     # Ubuntu
-    ubuntu_universe: true
-    ubuntu_multiverse: true
-    ubuntu_restricted: true
+    ubuntu_universe: false
+    ubuntu_multiverse: false
+    ubuntu_restricted: false
 
   # Flags
   flags:
@@ -65,25 +65,20 @@ config:
 
   # Packages to purge
   purge:
-    - gnome-mines
+    - 
   # PPA
   ppa:
     # With prefix ppa:
     - ppa:yubico/stable
-    # No Prefix ppa:
-    - kicad/kicad-5.1-releases
   # Install components
   # APT Packages, Python Modules, Debian packages
   install:
     snaps:
-      - htop
-      - classic::vscode
-      - classic::edge::hugo
+      - 
     # Debian packages/.deb files
     debs:
-      - https://github.com/sharkdp/bat/releases/download/v0.17.1/bat_0.17.1_amd64.deb
     binaries:
-      - kubectl::https://storage.googleapis.com/kubernetes-release/release/v1.20.1/bin/linux/amd64/kubectl
+      - 
     apt:
       # Admin related Stuff
       administration:
@@ -91,6 +86,8 @@ config:
       # Security Related Stuff
       security:
         - gnupg2
+        - ufw
+        - nmap
       # Productivity & Office Tools.
       productivity:
         - curl
@@ -101,49 +98,23 @@ config:
       other:
         - less
       external:
-        # Docker
-        - docker-ce
         # spotify
         - spotify-client
-        # Github
-        - gh
-        # Gvisor
-        - runsc
-        # Hashicorp
-        - terraform
-        # Microsoft
+        # git
+        - git
+        # Microsoft VSCode
         - code
         # Google
-        - google-cloud-sdk
         - google-chrome-stable
         # Signal
         - signal-desktop
-        # Skype
-        - skypeforlinux
-        # WineHQ
-        # - wine-stable
-        # Bazel
-        - bazel
-        # Edge
-        - microsoft-edge-dev
-        # Teams
-        - teams
         # Sublime
         - sublime-text
-        # From Universe in Ubuntu
-        - apt-xapian-index
         # Non-free in debian, multiverse in Ubuntu(canonical partner repos)
         - unrar
         # Brave
         - brave-browser
-        # Slack
-        - slack-desktop
         # Vivaldi
         - vivaldi-stable
-        # ProtonVPN
-        - protonvpn
-        # Miniconda
-        - conda
-        - podman
-        # Element
-        - element-desktop
+        # Telegram
+        - telegram-desktop
