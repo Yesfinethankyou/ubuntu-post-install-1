@@ -139,3 +139,6 @@ config:
         - gedit
         # flameshot
         - flameshot
+        - vlc
+        - youtube-dl
+        - feedreader
