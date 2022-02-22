@@ -17,7 +17,7 @@ config:
     apt: true
     # Whether to purge packages mentioned in config.purge key
     purge: false
-    debs: false
+    debs: true
     binaries: false
     snaps: false
   # Repository Flags
