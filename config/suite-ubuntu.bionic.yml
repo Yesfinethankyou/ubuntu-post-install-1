@@ -77,8 +77,8 @@ config:
       - 
     # Debian packages/.deb files
     debs:
-      - https://mullvad.net/media/app/MullvadVPN-2021.6_amd64.deb
-      - https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.deb
+      - https://mullvad.net/download/app/deb/latest
+      - https://discord.com/api/download?platform=linux&format=deb
     binaries:
       - 
     apt:
@@ -142,3 +142,5 @@ config:
         - vlc
         - youtube-dl
         - feedreader
+        - onionshare
+        - htop
